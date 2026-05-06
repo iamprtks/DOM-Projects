@@ -1,0 +1,101 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input box */
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+input:focus {
+  border-color: #667eea;
+}
+
+/* Add button */
+#addBtn {
+  padding: 10px 15px;
+  border: none;
+  background: #667eea;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#addBtn:hover {
+  background: #5a67d8;
+}
+
+/* List */
+#list {
+  list-style: none;
+}
+
+/* List item */
+#list li {
+  display: flex;
+  justify-content: space-between; /* KEY FIX */
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  word-break: break-word;
+}
+
+/* Text inside li (optional improvement) */
+#list li span {
+  flex: 1;
+}
+
+/* Delete button */
+.delete {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete:hover {
+  background: #e60000;
+}
