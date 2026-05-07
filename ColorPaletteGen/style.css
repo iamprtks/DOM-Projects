@@ -1,0 +1,115 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    padding: 20px;
+}
+
+.container{
+    width: 100%;
+    max-width: 850px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+h1{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.container > div:first-of-type{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+select,
+button{
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+select{
+    background: #f8fafc;
+    cursor: pointer;
+    min-width: 140px;
+}
+
+button{
+    background: #3b82f6;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.palette{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 18px;
+}
+
+.color{
+    height: 180px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 15px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+}
+
+.color:hover{
+    transform: scale(1.04);
+}
+
+@media(max-width: 600px){
+
+    h1{
+        font-size: 1.6rem;
+    }
+
+    .color{
+        height: 140px;
+        font-size: 0.9rem;
+    }
+
+    select,
+    button{
+        width: 100%;
+    }
+}
