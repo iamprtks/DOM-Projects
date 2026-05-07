@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    padding: 30px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.column{
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 500px;
+    backdrop-filter: blur(8px);
+    transition: 0.3s ease;
+}
+
+.column h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.tasks{
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task{
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    padding: 15px;
+    border-radius: 14px;
+    cursor: grab;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    transition: 0.2s ease;
+    user-select: none;
+}
+
+.task:hover{
+    transform: translateY(-3px);
+}
+
+.task.dragging{
+    opacity: 0.5;
+    transform: scale(1.03);
+}
+
+.add-btn{
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #22c55e;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.add-btn:hover{
+    background: #16a34a;
+    transform: translateY(-2px);
+}
+
+.drag-over{
+    border: 2px dashed #60a5fa;
+    background: rgba(96,165,250,0.12);
+}
+
+@media(max-width: 768px){
+
+    body{
+        padding: 20px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .column{
+        min-height: auto;
+    }
+
+    .tasks{
+        min-height: 250px;
+    }
+}
